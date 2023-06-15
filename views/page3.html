@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <script defer src="../script.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's Your Beer?</title>
+</head>
+<body>
+    <div class="nav-bar"> 
+        <button type="button" class="nav-bar button" onclick="goHomePage()">
+    Log-Out
+        </button>
+        <button type="button" class="nav-bar button" onclick="goPage5()">
+    My Beers History
+        </button>
+    </div>
+    <div class = "GridContainerTwo">
+        <div class = "element1">
+            <h4>TELL US ABOUT YOUR TASTE</h4>
+        </div>
+        <div class = "element2">
+            <form id="msform" action="/findBeer" method="post">
+               <h5>Fill In The Following Questions</h5>
+               <fieldset>
+                <label for="Beer_Type" class="field_two">What do you prefer?</label>
+                <div class="option_text">
+                  <input type="radio" id="option1" name="Beer_Type" value="option1">
+                  <label for="option1" class="field">Light Beer</label>
+                </div>
+                <div class="option_text">
+                  <input type="radio" id="option2" name="Beer_Type" value="option2">
+                  <label for="option2" class="field">Dark Beer</label>
+                </div>
+                <div class="action-button-container">
+                  <input type="button" name="next" class="next action-button" value="Next" />
+                </div>
+              </fieldset>
+              <fieldset>
+                <label for="User_Fruity" class="field_two">specific taste?</label>
+                <div class="option_text">
+                  <input type="radio" id="option3" name="Fruity_choice" value="option3">
+                  <label for="option3" class="field">Fruity</label>
+                </div>
+                <div class="option_text">
+                  <input type="radio" id="option4" name="Fruity_choice" value="option4">
+                  <label for="option4" class="field">Not Fruity</label>
+                </div>
+                <div class="action-button-container">
+                  <input type="button" name="previous" class="previous action-button prev-button" value="Previous" />
+                  <input type="button" name="next" class="next action-button" value="Next" />
+                </div>
+              </fieldset>
+              
+                <fieldset>
+                    <label for="User_Range" class="field_two">Alcohol Precentage</label>
+                    <input type="range" id="User_Range" name="range" min="0" max="15" step="1">
+                    <output for="User_Range" id="rangeValues">0        15 </output>
+                    <div class="action-button-container">
+                      <input type="button" name="previous" class="previous action-button prev-button" value="Previous" />
+                      <input type="button" name="next" class="next action-button" value="Next" />
+                    </div>
+                  </fieldset>
+                  
+            <fieldset>
+                <label for="User_country" class="field_two"> Specific Place Of Production?</label>
+                <select id="country" name="country" style="color: rgb(182, 163, 108);">
+                    <option value="nl">Any country</option>
+                    <option value="nl">Netherlands</option>
+                    <option value="ca" >Belgium</option>
+                    <option value="au" >Australia</option>
+                    <option value="ja" >Japan</option>
+                    <option value="ge" >Germany</option>
+                    <option value="us" >USA</option>
+                    <option value="uk" >United Kingdom</option>
+                    <option value="ir" >Ireland</option>
+                    <option value="nz" >New Zeland</option>
+                    <option value="cr" >Czech Republic</option>
+                </select>
+                <div class="action-button-container">
+                    <input type="button" name="previous" class="previous action-button prev-button" value="Previous" />
+                    <input type="button" name="next" class="next action-button" value="Next" />
+                  </div>
+            </fieldset>
+            <fieldset>
+                <label for="User_pref" class="field_two">What's the best way to drink?</label>
+                <div class="options-container">
+                  <label for="option5" class="field">
+                    <input type="radio" id="option5" name="Pref_choice" value="option5">
+                    Bottle
+                  </label>
+                  <label for="option6" class="field">
+                    <input type="radio" id="option6" name="Pref_choice" value="option6">
+                    Barrel
+                  </label>
+                </div>
+                <div class="action-button-container">
+                  <input type="button" name="previous" class="previous action-button prev-button" value="Previous" />
+                </div>
+              </fieldset>
+              
+            <div class="element3">
+                <button id="findBeerButton" type="submit">FIND MY BEER</button>
+              </div>
+            </form>
+        </div>
+    </div>
+    <div class = "item4">
+        <img src="../logo1.png" alt="Beers" width=33%>
+    </div>
+    
+</body>
+</html>
+
+
