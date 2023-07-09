@@ -1,0 +1,79 @@
+doctype html
+head
+  link(rel='stylesheet' href='../style.css')
+  script(defer='' src='../script.js')
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title What&apos;s Your Beer?
+.nav-bar
+  button.nav-bar.button(type='button' onclick='goHomePage()')
+    | Log-Out
+  button.nav-bar.button(type='button' onclick='goPage5()')
+    | My Beers History
+.GridContainerTwo
+  .element1
+    h4 TELL US ABOUT YOUR TASTE
+  .element2
+    form#msform(action='/findBeer' method='post')
+      h5 Fill In The Following Questions
+      fieldset
+        label.field_two(for='Beer_Type') What do you prefer?
+        .option_text
+          input#option1(type='radio' name='Beer_Type' value='option1')
+          label.field(for='option1') Light Beer
+        .option_text
+          input#option2(type='radio' name='Beer_Type' value='option2')
+          label.field(for='option2') Dark Beer
+        .action-button-container
+          input.next.action-button(type='button' name='next' value='Next')
+      fieldset
+        label.field_two(for='User_Fruity') specific taste?
+        .option_text
+          input#option3(type='radio' name='Fruity_choice' value='option3')
+          label.field(for='option3') Fruity
+        .option_text
+          input#option4(type='radio' name='Fruity_choice' value='option4')
+          label.field(for='option4') Not Fruity
+        .action-button-container
+          input.previous.action-button.prev-button(type='button' name='previous' value='Previous')
+          input.next.action-button(type='button' name='next' value='Next')
+      fieldset
+        label.field_two(for='User_Range') Alcohol Precentage
+        input#User_Range(type='range' name='range' min='0' max='15' step='1')
+        output#rangeValues(for='User_Range') 0        15 
+        .action-button-container
+          input.previous.action-button.prev-button(type='button' name='previous' value='Previous')
+          input.next.action-button(type='button' name='next' value='Next')
+      fieldset
+        label.field_two(for='User_country')  Specific Place Of Production?
+        select#country(name='country' style='color: rgb(182, 163, 108);')
+          option(value='nl') Any country
+          option(value='nl') Netherlands
+          option(value='ca') Belgium
+          option(value='au') Australia
+          option(value='ja') Japan
+          option(value='ge') Germany
+          option(value='us') USA
+          option(value='uk') United Kingdom
+          option(value='ir') Ireland
+          option(value='nz') New Zeland
+          option(value='cr') Czech Republic
+        .action-button-container
+          input.previous.action-button.prev-button(type='button' name='previous' value='Previous')
+          input.next.action-button(type='button' name='next' value='Next')
+      fieldset
+        label.field_two(for='User_pref') What&apos;s the best way to drink?
+        .options-container
+          label.field(for='option5')
+            input#option5(type='radio' name='Pref_choice' value='option5')
+            |                     Bottle
+          label.field(for='option6')
+            input#option6(type='radio' name='Pref_choice' value='option6')
+            |                     Barrel
+        .action-button-container
+          input.previous.action-button.prev-button(type='button' name='previous' value='Previous')
+      .element3
+        button#findBeerButton(type='submit') FIND MY BEER
+.item4
+  img(src='../logo1.png' alt='Beers' width='33%')

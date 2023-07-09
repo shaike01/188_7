@@ -1,0 +1,27 @@
+doctype html
+head
+  link(rel='stylesheet' href='../style.css')
+  script(defer='' src='../script.js')
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+.grid-form
+  form(action='/page3' method='get')
+    h2.form_head SIGN-UP
+    label.field(for='') Email
+    input.fill(type='email' name='' style='color: bisque;')
+    label.field(for='') Password
+    input.fill(type='password' style='color: bisque;')
+    label.field(for='') Confirm Password
+    input.fill(type='password' style='color: bisque;')
+    label.field(for='Name') Name
+    input.fill(type='Name' style='color: bisque;')
+    .checkbox
+      input(type='checkbox' id='' name='olderThan18' value='')
+      |   I Declare That I&apos;m Older Than 18
+    .form_button
+      button.field(id='' type='submit') SUBMIT
+    p#go_to_login_p
+      | Already Have An Account?
+      a#go_to_login.field(type='button' onclick='gologin()') Log-In
+  .message-container
