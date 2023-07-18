@@ -9,19 +9,19 @@
 </head>
 <body>
      <div class="grid-form" >
-        <form action="/page3" method="post"> 
+        <form action="/ChekLogIn" method="post"> 
             <h2 class="form_head">LOG-IN</h2>
-            <label for="" class="field"> Email </label>
-            <input type="email" name="" class="fill" class="field"  style="color: bisque;">
-            <label for="" class="field">Password</label>
-            <input type="password" class="fill" class="field"  style="color: bisque;">
+            <label for="email" class="field"> Email </label>
+            <input type="email" name="email" class="fill" class="field"  style="color: bisque;">
+            <label for="email" class="field">Password</label>
+            <input type="password" name="password" class="fill" class="field"  style="color: bisque;">
             </select>
             <div class="form_button">
                 <button class="field" id="" type="submit">LOG-IN</button>
             </div>
             <a class="field" id="login_homepage" onclick="goHomePage()">Return To Homepage</a>
         </form>
-       
+        <div id="error-message" class="error-message"></div>
      </div>
 </body>
 </html>

@@ -1,0 +1,51 @@
+REQUIREMENTS
+3.1 modules:express, path, mysql2, body-parser, cookie-parser, csv to jason,fast-csv,fs, loadash,
+3.2 delete path: /droptables
+3.3 syntax: 
+
+//tables creation -------------------------------------------------------------------------------------------------
+const createSignUPTable = (req, res) => {
+    const createTableQuery = 'CREATE TABLE IF NOT EXISTS `Users` (email varchar(255) NOT NULL, name varchar(255) NOT NULL, password varchar(255) NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8';
+    sql.query(createTableQuery, (err, mysqlres) => {
+        if (err) {
+            console.log(err);
+            res.status(400).send("Cannot create users table");
+            return;
+        }
+        console.log("Created users table");
+        res.redirect("/SignUp");
+    });
+};
+
+//------------------------------------------------------------------------------------
+const createBeersTable = (req, res) => {
+    const query = 'CREATE TABLE IF NOT EXISTS beers (name VARCHAR(255) NOT NULL, producer VARCHAR(255) NOT NULL,type VARCHAR(255) NOT NULL,origin VARCHAR(255) NOT NULL,flavor VARCHAR(255) NOT NULL,category VARCHAR(255) NOT NULL,comment VARCHAR(255) NOT NULL,alcohol INT NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8;'
+  
+    sql.query(query, (err, mysqlres) => {
+      if (err) {
+            console.log(err);
+            res.status(400).send("Cannot create beers table");
+            return;
+      }
+      console.log("Created Beers table");
+      res.redirect("/insertData");
+    });
+  };
+
+
+
+
+//------------------------------------------------------------------------------------
+         const findTheRightBeer = (req, res) => {
+    const {Beer_Type, flavor, range, country, Type} = req.body;
+
+    // Create the beersFound table if it does not already exist
+    const createTableQuery = 'CREATE TABLE IF NOT EXISTS beersFound (name VARCHAR(255) NOT NULL, producer VARCHAR(255) NOT NULL,type VARCHAR(255) NOT NULL,origin VARCHAR(255) NOT NULL,flavor VARCHAR(255) NOT NULL,category VARCHAR(255) NOT NULL,comment VARCHAR(255) NOT NULL,alcohol INT NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8;';
+
+    sql.query(createTableQuery, (err, result) => {
+        if(err) {
+            console.log(err);
+            return;
+        }
+        console.log("Table created/already exists");
+    });

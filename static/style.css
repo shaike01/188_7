@@ -195,6 +195,8 @@ h1 {
   font-weight: bold;
 }
 
+
+
  .form_button{
     display: flex;
     justify-content: center;
@@ -598,3 +600,26 @@ option{
     transform: scale(1.1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.406);
   }
+
+
+  .error-message {
+    display: none;
+  background-color: #ff0000;
+  color: #ffffff;
+  padding: 10px;
+  margin-top: 10px;
+}
+  
+
+#reveal{
+  background-color: var(--myyellow);
+    color: var(--mywhite);
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 20vw;
+    height: 20vw;
+    font-family: VarelaRound;
+}

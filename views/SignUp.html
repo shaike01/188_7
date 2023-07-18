@@ -9,16 +9,16 @@
 </head>
 <body>
     <div class="grid-form">
-        <form action="/page3" method="get">
+        <form action="/createNewUser" method="post">
             <h2 class="form_head">SIGN-UP</h2>
-            <label for="" class="field">Email</label>
-            <input type="email" name="" class="fill" class="field" style="color: bisque;">
-            <label for="" class="field">Password</label>
-            <input type="password" class="fill" class="field" style="color: bisque;">
-            <label for="" class="field">Confirm Password</label>
-            <input type="password" class="fill" class="field" style="color: bisque;">
+            <label for="Email" class="field">Email</label>
+            <input type="email" name="Email" class="fill" class="field" style="color: bisque;">
+            <label for="Password" class="field">Password</label>
+            <input type="password" name="Password" class="fill" class="field" style="color: bisque;" required>
+            <label for="confirmPassword" class="field">Confirm Password</label>
+            <input type="password" name="confirmPassword" class="fill" class="field" style="color: bisque;" required>
             <label for="Name" class="field">Name</label>
-            <input type="Name" class="fill" class="field" style="color: bisque;">
+            <input type="Name" name="Name" class="fill" class="field" style="color: bisque;">
             <div class="checkbox">
                 <input type="checkbox" id="" name="olderThan18" value="">  I Declare That I'm Older Than 18
             </div>
@@ -28,6 +28,8 @@
             <p id="go_to_login_p">Already Have An Account?<a type="button" class="field" id="go_to_login" onclick="gologin()">Log-In</a></p>
         </form>
        <div class="message-container"></div>
+       <div id="error-message" class="error-message"></div>
+
     </div>
 </body>
 </html>

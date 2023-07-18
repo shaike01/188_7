@@ -22,83 +22,86 @@
             <h4>TELL US ABOUT YOUR TASTE</h4>
         </div>
         <div class = "element2">
-            <form id="msform" action="/findBeer" method="post">
+            <form id="msform" action="/findTheRightBeer" method="post">
                <h5>Fill In The Following Questions</h5>
                <fieldset>
                 <label for="Beer_Type" class="field_two">What do you prefer?</label>
-                <div class="option_text">
-                  <input type="radio" id="option1" name="Beer_Type" value="option1">
+                <div class="option_text" >
+                  <input type="radio" id="option1" name="Beer_Type" value="Light Beer" required>
                   <label for="option1" class="field">Light Beer</label>
                 </div>
                 <div class="option_text">
-                  <input type="radio" id="option2" name="Beer_Type" value="option2">
+                  <input type="radio" id="option2" name="Beer_Type" value="Dark Beer" required>
                   <label for="option2" class="field">Dark Beer</label>
                 </div>
                 <div class="action-button-container">
-                  <input type="button" name="next" class="next action-button" value="Next" />
+                  <input type="button" name="next" class="next action-button" value="Next" required>
                 </div>
               </fieldset>
               <fieldset>
-                <label for="User_Fruity" class="field_two">specific taste?</label>
+                <label for="" class="field_two">specific Flavor?</label>
                 <div class="option_text">
-                  <input type="radio" id="option3" name="Fruity_choice" value="option3">
-                  <label for="option3" class="field">Fruity</label>
-                </div>
-                <div class="option_text">
-                  <input type="radio" id="option4" name="Fruity_choice" value="option4">
-                  <label for="option4" class="field">Not Fruity</label>
+                <input type="radio" id="option1" name="flavor" value="Fruity" > Fruity
+                <input type="radio" id="option2" name="flavor" value="malt" > malt
+                <input type="radio" id="option3" name="flavor" value="bitter" > bitter
+                <input type="radio" id="option4" name="flavor" value="chocolate" > chocolate
+                <input type="radio" id="option5" name="flavor" value="coffee" > coffee
                 </div>
                 <div class="action-button-container">
-                  <input type="button" name="previous" class="previous action-button prev-button" value="Previous" />
-                  <input type="button" name="next" class="next action-button" value="Next" />
+                  <input type="button" name="previous" class="previous action-button prev-button" value="Previous" required>
+                  <input type="button" name="next" class="next action-button" value="Next" required>
                 </div>
               </fieldset>
               
                 <fieldset>
-                    <label for="User_Range" class="field_two">Alcohol Precentage</label>
-                    <input type="range" id="User_Range" name="range" min="0" max="15" step="1">
+                    <label for="User_Range" class="field_two">MAX Alcohol Precentage</label>
+                    <input type="range" id="User_Range" name="range" min="0" max="15" step="1" required>
                     <output for="User_Range" id="rangeValues">0        15 </output>
                     <div class="action-button-container">
-                      <input type="button" name="previous" class="previous action-button prev-button" value="Previous" />
-                      <input type="button" name="next" class="next action-button" value="Next" />
+                      <input type="button" name="previous" class="previous action-button prev-button" value="Previous" required>
+                      <input type="button" name="next" class="next action-button" value="Next" required>
                     </div>
                   </fieldset>
                   
             <fieldset>
                 <label for="User_country" class="field_two"> Specific Place Of Production?</label>
-                <select id="country" name="country" style="color: rgb(182, 163, 108);">
-                    <option value="nl">Any country</option>
-                    <option value="nl">Netherlands</option>
-                    <option value="ca" >Belgium</option>
-                    <option value="au" >Australia</option>
-                    <option value="ja" >Japan</option>
-                    <option value="ge" >Germany</option>
-                    <option value="us" >USA</option>
-                    <option value="uk" >United Kingdom</option>
-                    <option value="ir" >Ireland</option>
-                    <option value="nz" >New Zeland</option>
-                    <option value="cr" >Czech Republic</option>
+                <select id="country" name="country" style="color: rgb(182, 163, 108);" required>
+                    <option value="none">Any country</option>
+                    <option value="Netherlands">Netherlands</option>
+                    <option value="Belgium" >Belgium</option>
+                    <option value="Italy" >Italy</option>
+                    <option value="Mexico" >Mexico</option>
+                    <option value="Japan" >Japan</option>
+                    <option value="Germany" >Germany</option>
+                    <option value="United States" >United States</option>
+                    <option value="United Kingdom" >United Kingdom</option>
+                    <option value="Ireland" >Ireland</option>
+                    <option value="Czech Republic" >Czech Republic</option>
                 </select>
                 <div class="action-button-container">
-                    <input type="button" name="previous" class="previous action-button prev-button" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input type="button" name="previous" class="previous action-button prev-button" value="Previous" required>
+                    <input type="button" name="next" class="next action-button" value="Next" required>
                   </div>
             </fieldset>
             <fieldset>
-                <label for="User_pref" class="field_two">What's the best way to drink?</label>
+                <label for="User_pref" class="field_two">For The Advanced...types?</label>
                 <div class="options-container">
-                  <label for="option5" class="field">
-                    <input type="radio" id="option5" name="Pref_choice" value="option5">
-                    Bottle
-                  </label>
-                  <label for="option6" class="field">
-                    <input type="radio" id="option6" name="Pref_choice" value="option6">
-                    Barrel
-                  </label>
+                  <input type="radio" id="option1" name="Type" value="Lager" > Lager
+                  <input type="radio" id="option2" name="Type" value="Pale" > Pale-Ale
+                  <input type="radio" id="option3" name="Type" value="API" > API
+                  <input type="radio" id="option4" name="Type" value="Wheat Beer" > Wheat Beer 
+                  <input type="radio" id="option5" name="Type" value="Porter" > Porter
+                  <input type="radio" id="option6" name="Type" value="Stout" > Stout
                 </div>
                 <div class="action-button-container">
-                  <input type="button" name="previous" class="previous action-button prev-button" value="Previous" />
+                  <input type="button" name="previous" class="previous action-button prev-button" value="Previous" required>
                 </div>
+
+
+              
+                
+    
+
               </fieldset>
               
             <div class="element3">

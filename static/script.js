@@ -7,7 +7,7 @@ function goHomePage() {
 }
 
 function goSignUp() {
-  window.location.href = '/SignUp';
+  window.location.href = '/createSignUPTable';
 }
 
 function goPage3() {
@@ -84,5 +84,36 @@ document.querySelector('form').addEventListener('submit', function (event) {
     messageContainer.style.display = 'none'; // Hide the message
   }
 });
+
+
+function getculcs(){
+  fetch('/solution', { 
+    method: 'POST',
+    headers: {  "Content-type": "application/json; charset=UTF-8"}
+  })
+.then(response => response.json())
+.then(responseData => {
+
+document.querySelector('.grid3').innerHTML = `
+<p>
+    ${responseData.name} <br>
+    <br>
+    ${responseData.producer} <br>
+    <br>
+    ${responseData.type} <br>
+    <br>
+    ${ responseData.origin} <br>
+    <br>
+    ${responseData.flavor} <br>
+    <br>
+    ${ responseData.category} <br>
+    <br>
+    ${ responseData.comment} <br>
+    <br>
+    ${responseData.alcohol}% Alcohol <br>
+    <br>
+</p> `;
+})};
+
 
 /*------------------------------------------------------------------------------------------*/
